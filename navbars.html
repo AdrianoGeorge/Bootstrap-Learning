@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <title>Learning Bootstrap Project</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <!-- https://getbootstrap.com/docs/5.1/components/navbar/ -->
+    <!-- Navbars require a wrapping .navbar with .navbar-expand{-sm|-md|-lg|-xl|-xxl} for responsive collapsing and color scheme classes.
+    Navbars and their contents are fluid by default. Change the container to limit their horizontal width in different ways.
+    Use our spacing and flex utility classes for controlling spacing and alignment within navbars. -->
+    <nav class="navbar navbar-expand-md navbar-light pt-5 pb-4">
+      <div class="container-md border border-red">
+        <!-- navbar brand / title -->
+        <a class="navbar-brand" href="#intro">
+          <!--  branding logo => navbar-brand -->
+          <span class="text-secondary fw-bold"> Header Logo </span>
+        </a>
+        <!-- toggle button for mobile nav -->
+        <!-- .navbar-toggler for use with our collapse plugin and other navigation toggling behaviors. -->
+
+        <!-- // data-bs-target is the id of the navbar toggler button that will be toggled.       
+        // data-bs-target - wich collapsible section i want to tagged/ -->
+
+        <!-- //when button is clicked the navbar will collapse and the button will be
+        replaced with a button to expand the navbar again. -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main-nav"
+          aria-controls="main-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <!-- hamburger icon -->
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- navbar links -->
+        <!-- //collapse class is used to hide the navbar links when the navbar is
+        collapsed. -->
+        <!--  data-bs-target="#main-nav" is the id -->
+        <!-- //navbar-collapse is the class that will be used to collapse and style
+        the navbar. -->
+        <div
+          class="collapse navbar-collapse justify-content-end align-center"
+          id="main-nav"
+        >
+          <!-- // navbar-nav is the class that will be used to style the navbar links. -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#topics">About The Book</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#reviews">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Get in Touch</a>
+            </li>
+            <li class="nav-item d-md-none">
+              <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+            <!-- // d-md-inline-block is used to display the navbar links on medium and large screens.  -->
+            <li class="nav-item ms-2 d-none d-md-inline">
+              <a class="btn btn-secondary" href="#pricing">buy now</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- main image & intro text -->
+    <section id="intro">
+      <div class="container-lg">
+        <div class="row g-4 justify-content-center align-items-center">
+          <div class="col-md-5 text-center text-md-start">
+            <h1>
+              <div class="display-2">Hello Bootstrap</div>
+              <div class="display-5 text-muted">Your Coding Skills</div>
+            </h1>
+            <p class="lead my-4 text-muted ds">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam, dignissimos?
+            </p>
+            <a href="#pricing" class="btn btn-secondary btn-lg">Learn Now</a>
+          </div>
+          <div class="col-md-5 text-center d-none d-md-block">
+            <img src="/assets/image1.jpg" class="img-fluid" alt="ebook" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"
+  ></script>
+</html>
