@@ -450,6 +450,7 @@
                         veritatis sunt saepe quasi deserunt ex ipsum. Est possimus, aspernatur, vitae eligendi rem odit
                         quaerat, ipsum pariatur ratione maxime delectus fuga minus accusamus dolores iusto maiores
                         accusantium cumque magnam placeat quia!</p>
+                    <!-- Toggle between multiple modals with some clever placement of the data-bs-target and data-bs-toggle attributes. For example, you could toggle a password reset modal from within an already open sign in modal.   -->
                     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reg-modal">
                         Register for Updates
                     </button>
@@ -458,12 +459,18 @@
         </div>
     </section>
 
-    <!-- modal itself -->
+    <!-- Modal Itself -->
     <!-- https://getbootstrap.com/docs/5.1/components/modal/ -->
+    <!-- Modals are built with HTML, CSS, and JavaScript. They’re positioned over everything else in the document and remove scroll from the <body> so that modal content scrolls instead. -->
+    <!-- data-bs-target="#reg-modal" -->
     <div class="modal fade" id="reg-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+        <!-- You can also create a scrollable modal that allows scroll the modal body by adding .modal-dialog-scrollable to .modal-dialog. -->
+        <!-- Vertically centered
+Add .modal-dialog-centered to .modal-dialog to vertically center the modal. -->
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
+                    <!-- Be sure to add aria-labelledby="...", referencing the modal title, to .modal. -->
                     <h5 class="modal-title" id="modal-title">Get the Latest Updates</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
